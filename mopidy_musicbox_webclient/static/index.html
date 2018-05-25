@@ -70,7 +70,7 @@
                 <span class="navtxt" id="toggletxt"> Fullscreen </span><i class="fa fa-desktop"></i></a>
         </li>
         <li id="navSettings" data-icon="false">
-                <a href="/settings/">
+                <a href="settings.html">
                 <span class="navtxt"> Settings </span><i class="fa fa-cog"></i></a>
         </li>
         <li id="navshutdown" data-icon="false">
@@ -116,12 +116,12 @@
 <div data-role="popup" data-transition="none" data-theme="b" id="popupTracks">
     <div data-role="collapsible-set">
         <ul data-role="listview" data-icon="false" id="popupTracksLv">            
-            <li data-icon="playNext">
-                <a href="#" onclick="return controls.playTracks(PLAY_NEXT, mopidy);">Play Track Next</a>
-            </li>
             <li data-icon="add">
-                <a href="#" onclick="return controls.playTracks(ADD_THIS_BOTTOM, mopidy);">Add Track to Bottom of Queue</a>
+                <a href="#" onclick="return controls.playTracks(ADD_THIS_BOTTOM, mopidy);">Add Track</a>
             </li>
+			<li data-icon="playNext">
+                <a href="#" onclick="return controls.playTracks(PLAY_NEXT, mopidy);">Play Track Next</a>
+            </li>            
             <li class="popupAlbumLi">
                 <a href="#" onclick="showAlbumPopup('#popupTracks', mopidy)">Show Album <span class="popupAlbumName"></span></a>
             </li>
