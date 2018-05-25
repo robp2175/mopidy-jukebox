@@ -115,10 +115,7 @@
 
 <div data-role="popup" data-transition="none" data-theme="b" id="popupTracks">
     <div data-role="collapsible-set">
-        <ul data-role="listview" data-icon="false" id="popupTracksLv">
-            <li data-icon="play">
-                <a href="#" onclick="return controls.playTracks(PLAY_NOW, mopidy);">Play <span class="popupTrackName"></span></a>
-            </li>
+        <ul data-role="listview" data-icon="false" id="popupTracksLv">            
             <li data-icon="playNext">
                 <a href="#" onclick="return controls.playTracks(PLAY_NEXT, mopidy);">Play Track Next</a>
             </li>
@@ -283,25 +280,13 @@
                 <h4>Browse</h4>
             </div>
         </a>
-        <a href="#stream" onclick="switchContent('stream' ); return false;">
-            <div class="ui-block-a">
-                <i class="fa fa-rss"></i>
-                <h4>Streams</h4>
-            </div>
-        </a>
         <a href="#search" onclick="switchContent('search' ); return false;">
             <div class="ui-block-b">
                 <i class="fa fa-search"></i>
                 <h4>Search</h4>
             </div>
         </a>
-        <a id="homeAlarmClock" href="/alarmclock/">
-            <div class="ui-block-a">
-                <i class="fa fa-clock-o"></i>
-                <h4>Alarm Clock</h4>
-            </div>
-        </a>
-        <a id="homesettings" href="/settings/">
+        <a id="homesettings" href="settings.html">
             <div class="ui-block-b">
                 <i class="fa fa-gear"></i>
                 <h4>Settings</h4>
@@ -375,6 +360,21 @@
     </div>
     <div class="ui-grid">
         <ul id="browsetable" class="table"></ul>
+    </div>
+	<div id="modalinfo">
+        <img id="albumCoverImg" src="images/default_cover.png" alt="Album cover"/>
+    </div>
+
+    <div class="nowPlaying-artistInfo">
+        <h3 id="modalname"></h3>
+        <p class="artistAlbumLine"><span id="modalartist"></span> - <span id="modalalbum"></span></p>
+    </div>
+
+    <div id="slidercontainer"><!-- slider for track position -->
+        <span id="songelapsed" class="pull-left"></span>
+        <span id="songlength" class="pull-right"></span>
+        <label for="trackslider" disabled="disabled" class="ui-hidden-accessible">Position</label>
+        <input id="trackslider" name="trackslider" data-mini="true" type="range" />
     </div>
 </div>
 <!--/browsepane-->
