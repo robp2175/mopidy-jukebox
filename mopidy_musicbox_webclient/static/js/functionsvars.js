@@ -252,7 +252,8 @@ function renderSongLi (previousTrack, track, nextTrack, uri, tlid, target, curre
         tlidParameter = '\',\'' + tlid
         onClick = 'return controls.playQueueTrack(' + tlid + ');'
     } else {  // All other tracklist: Show default action icon. onClick performs default action
-        onClick = 'return controls.playTracks(\'\', mopidy, \'' + track.uri + '\', \'' + uri + '\');'
+        onClick = 'return popupTracks(event, \'' + uri + '\',\'' + track.uri + tlidParameter + '\');'
+		//onClick = 'return controls.playTracks(\'\', mopidy, \'' + track.uri + '\', \'' + uri + '\');'
     }
 
     html += '<li class="song albumli" id="' + getjQueryID(target, track.uri) + '" tlid="' + tlid + '">'
