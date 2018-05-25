@@ -364,18 +364,19 @@
 	<div id="modalinfo">
         <img id="albumCoverImg" src="images/default_cover.png" alt="Album cover"/>
     </div>
+	<div style="width: 50%; min-width:200px;margin: 0 auto;">
+		<div class="nowPlaying-artistInfo">
+			<h3 id="modalname"></h3>
+			<p class="artistAlbumLine"><span id="modalartist"></span> - <span id="modalalbum"></span></p>
+		</div>
 
-    <div class="nowPlaying-artistInfo">
-        <h3 id="modalname"></h3>
-        <p class="artistAlbumLine"><span id="modalartist"></span> - <span id="modalalbum"></span></p>
-    </div>
-
-    <div id="slidercontainer"><!-- slider for track position -->
-        <span id="songelapsed" class="pull-left"></span>
-        <span id="songlength" class="pull-right"></span>
-        <label for="trackslider" disabled="disabled" class="ui-hidden-accessible">Position</label>
-        <input id="trackslider" name="trackslider" data-mini="true" type="range" />
-    </div>
+		<div id="slidercontainer"><!-- slider for track position -->
+			<span id="songelapsed" class="pull-left"></span>
+			<span id="songlength" class="pull-right"></span>
+			<label for="trackslider" disabled="disabled" class="ui-hidden-accessible">Position</label>
+			<input id="trackslider" name="trackslider" data-mini="true" type="range" />
+		</div>
+	</div>
 </div>
 <!--/browsepane-->
 
