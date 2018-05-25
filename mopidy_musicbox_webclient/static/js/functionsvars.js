@@ -250,7 +250,9 @@ function renderSongLi (previousTrack, track, nextTrack, uri, tlid, target, curre
 
     if (target === CURRENT_PLAYLIST_TABLE && typeof tlid === 'number' && tlid >= 0) {  // Current queue: Show popup menu icon. onClick plays track.
         tlidParameter = '\',\'' + tlid
-        onClick = 'return controls.playQueueTrack(' + tlid + ');'
+        //onClick = 'return controls.playQueueTrack(' + tlid + ');'
+		//onclick="return popupTracks(event, 'undefined','spotify:track:3fpzBeEHvuXKOl7QeVe1iz','5');"
+		onClick = 'return controls.playTracks(\'\', mopidy, \'' + track.uri + '\', \'' + uri + '\');'
     } else {  // All other tracklist: Show default action icon. onClick performs default action
         onClick = 'return popupTracks(event, \'' + uri + '\',\'' + track.uri + tlidParameter + '\');'
 		//onClick = 'return controls.playTracks(\'\', mopidy, \'' + track.uri + '\', \'' + uri + '\');'
